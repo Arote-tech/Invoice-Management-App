@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang = "eng">
+    <head>
+        <meta charset ="UTF-8">
+        <meta name ="viewport" content = "width=device-width, initial-scale= 1.0">
+        <title>Invoice Management App</title>
+    <link rel = "stylesheet" href = "style.css">
+    <!-- Font Awesome CDN -->
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin = "anonymous" referrerpolicy = "no-referrer">
+
+    </head>
+    <body>
+        <article [data-testid] = "test-app-container">
+            <h1  [data-testid] = "test-title">Invoices</h1>
+            <p  [data-testid] = "test-no-invoices">No invoices</p>
+
+            <div [data-testid] = "test-invoice-updaters">
+                <select name="filter by status"  [data-testid] = "test-filter">
+                    <option value="all">Draft</option>
+                    <option value="paid">Pending</option>
+                    <option value="unpaid">Paid</option>
+                </select>
+                <button [data-testid] = "test-create-invoice-btn"><i class="fas fa-plus"></i>New Invoice</button>
+
+            </div>
+            <div [data-testid]="test-empty-state-field">
+                <img src="assets/empty-state.png" alt="Empty State Image">
+                <h2>There is nothing here</h2>
+                <p>Create an invoice by clicking the New Invoice button and get started.</p>
+                <button [data-testid] = "test-create-invoice-btn-2"><i class="fas fa-plus"></i>New Invoice</button>
+            </div>
+
+            <form action="" [data-testid] = "test-invoice-form">
+                <h2>New Invoice</h2>
+                <div class="bill-from">
+                    <h4>Bill From</h4>
+                    <label for="street-address">StreetAddress</label>
+                    <input type="text" [data-testid] = "test-invoice-input-1">
+
+                    <label for="city">City</label>
+                    <input type="text" [data-testid] = "test-invoice-input-2">
+
+                    <label for="post-code">Post Code</label>
+                    <input type="text" [data-testid] = "test-invoice-input-2">
+
+                    <label for="country">Country</label>
+                    <input type="text" [data-testid] = "test-invoice-input-2">
+
+                </div>
+
+                <div class="bill-to">
+                    <h4>Bill To</h4>
+                    <label for="client-name">Client's Name</label>
+                    <input type="text" [data-testid] = "test-invoice-input-1">
+
+                    <label for="client-email">Client's Email</label>
+                    <input type="email" [data-testid] = "test-invoice-input-1" placeholder="e.g email@example.com">
+
+                    <label for="street-address">StreetAddress</label>
+                    <input type="text" [data-testid] = "test-invoice-input-1">
+
+                    <label for="city">City</label>
+                    <input type="text" [data-testid] = "test-invoice-input-2">
+
+                    <label for="post-code">Post Code</label>
+                    <input type="text" [data-testid] = "test-invoice-input-2">
+
+                    <label for="country">Country</label>
+                    <input type="text" [data-testid] = "test-invoice-input-2">
+                </div>
+
+                <label for="invoice-date">Invoice Date</label>
+                <input type="date" id="invoice-date" [data-testid] = "test-invoice-input-2">
+
+                <label for="payment-terms">Payment Terms</label>
+                <select [data-testid] = "test-invoice-input-2">
+                    <option value="net-15">Net 15</option>
+                    <option value="net-30">Net 30</option>
+                    <option value="net-60">Net 60</option>
+                    <option value="net-90">Net 90</option>
+                </select>
+
+                <label for="payment-descr">Payment Description</label>
+                <input type="text" [data-testid] = "test-invoice-input-1" placeholder="e.g Graphic Design Project">
+
+
+                <h3 class="item-list">Items List</h3>
+                <div data-testid = "test-item-list">
+                    <label for="item-name">Item Name</label>
+                    <input type="text">
+                    <label for="item-quantity">Qty</label>
+                    <input type="number">  
+                    <label for="item-price">Price</label>
+                    <input type="number">
+                    <label for="item-total">Total</label>
+                    <input type="number" readonly>
+                    <button><i class="fas fa-trash-alt"></i></button>
+
+
+                    <label for="add-new-item"></label>
+                    <input type="item" [data-testid] = "test-invoice-added-item-input" placeholder="+ Add New Item">
+                </div>
+                <div [data-testid] = "test-btn-field">
+                    <button type="button" [data-testid] = "test-btn-1">Discard</button>
+                    <button type="button" [data-testid] = "test-btn-2">Save as Draft</button>
+                    <button type="button" [data-testid] = "test-btn-3">Save @apos Send</button>
+                </div>
+                 
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+        
+        <script src="script.js"></script>
+            
+    </body>
+</html>
