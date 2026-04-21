@@ -1,0 +1,140 @@
+
+:root {
+    --primary-color: #7c5dfa;
+    --primary-light-color: #9277ff;
+    --dark-mode-background: #1e2139;
+    --dark-mode-easy-background: #252945;
+    --text-fade-color: #dfe3fa;
+    --intermediate-dark: #888eb0;
+    --highlight-color: #7e88c3;
+    --secondary-dark: #0c0e16;
+    --super-dark: #141625;
+    --was-red: #ec5757;
+    --was-red-hover: #e29a9a;
+    --light-bg: #f8f8fb;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+
+body {
+    background-color: var(--light-bg);
+    color: var(--secondary-dark);
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+}
+
+.dark-mode {
+    background-color: var(--dark-mode-background);
+    color: var(--text-fade-color);
+}
+
+[data-testid = "test-app-container"] {
+    display: flex;
+    background-color: inherit;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px auto;
+    width: 730px;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode article {
+    background-color: var(--dark-mode-easy-background);
+    color: var(--text-fade-color);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+
+[data-testid = "header-elements"] {
+    display: flex;
+    margin-bottom: 20px;
+    justify-items: space-between;
+    flex-direction: row;
+    height: 55px;
+    top: 77px;
+    left: 355px;
+    max-width: 730px;
+}
+
+.title-block {
+    display: flex;
+    flex-direction: column;
+    height: 65px;
+    width: 4.8rem;
+    text-wrap: wrap;
+}
+
+
+ [data-testid = "test-title"] {
+    font-size: 18px;
+    font-weight: bold;
+ }
+
+
+ [data-testid = "test-no-invoices"] {
+    font-size: 6px;
+    color: var(--intermediate-dark);
+ }
+
+
+[data-testid = "test-invoice-updaters"] {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: smaller;
+}
+
+
+[data-testid = "test-filter"] {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: smaller;
+    width: 192px;
+    height: 128px;
+    padding: 5px 10px;
+    background-color: var(--text-fade-color);
+    color: var(--secondary-dark);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+[data-testid = "test-create-invoice-btn"] {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: smaller;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+[data-testid = "test-create-invoice-btn"]:hover {
+    background-color: var(--primary-light-color);
+    color: var(--secondary-dark);
+}
+
+.fas fa-plus {
+    font-size: 10px;
+    color: var(--primary-light-color);
+}
+
+
+
+
+

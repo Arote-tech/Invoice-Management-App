@@ -11,26 +11,36 @@
     </head>
     <body>
         <article [data-testid] = "test-app-container">
-            <h1  [data-testid] = "test-title">Invoices</h1>
-            <p  [data-testid] = "test-no-invoices">No invoices</p>
+            <div [data-testid] = "header-elements">
+                <div class="title-block">
+                    <h1  [data-testid] = "test-title">Invoices</h1>
+                    <p  [data-testid] = "test-no-invoices">No invoices</p> 
+                </div>           
 
-            <div [data-testid] = "test-invoice-updaters">
-                <select name="filter by status"  [data-testid] = "test-filter">
-                    <option value="all">Draft</option>
-                    <option value="paid">Pending</option>
-                    <option value="unpaid">Paid</option>
-                </select>
-                <button [data-testid] = "test-create-invoice-btn"><i class="fas fa-plus"></i>New Invoice</button>
+                <div [data-testid] = "test-invoice-updaters">
+                    <label for="filter-by-status">Filter by Status</label>
+                    <label class="checkbox-container" for="checkbox" aria-label="dropdown">
+                        <select name="filter"  [data-testid] = "test-filter">
+                        <option value="all">Draft</option> 
+                        <option value="paid">Paid</option>
+                        <option value="unpaid">Pending</option>                         
+                    </select>
+                    <span class = "checkmark"></span>
+                    </label>
+                    
+                    <button [data-testid] = "test-create-invoice-btn"><i class="fas fa-plus"></i>New Invoice</button>
+
+                </div>
 
             </div>
+
             <div [data-testid]="test-empty-state-field">
                 <img src="assets/empty-state.png" alt="Empty State Image">
                 <h2>There is nothing here</h2>
-                <p>Create an invoice by clicking the New Invoice button and get started.</p>
-                <button [data-testid] = "test-create-invoice-btn-2"><i class="fas fa-plus"></i>New Invoice</button>
+                <p>Create an invoice by clicking the <br>New Invoice button and get started.</p>
             </div>
 
-            <form action="" [data-testid] = "test-invoice-form">
+            <!-- <form action="" [data-testid] = "test-invoice-form">
                 <h2>New Invoice</h2>
                 <div class="bill-from">
                     <h4>Bill From</h4>
@@ -70,14 +80,14 @@
                 </div>
 
                 <label for="invoice-date">Invoice Date</label>
-                <input type="date" id="invoice-date" [data-testid] = "test-invoice-input-2">
+                <input type="date" [data-testid] = "test-invoice-date">
 
                 <label for="payment-terms">Payment Terms</label>
                 <select [data-testid] = "test-invoice-input-2">
-                    <option value="net-15">Net 15</option>
-                    <option value="net-30">Net 30</option>
-                    <option value="net-60">Net 60</option>
-                    <option value="net-90">Net 90</option>
+                    <option value="net-15">Net 7 days</option>
+                    <option value="net-30">Net 15 days</option>
+                    <option value="net-60">Net 21 days</option>
+                    <option value="net-90">Net 30 days</option>
                 </select>
 
                 <label for="payment-descr">Payment Description</label>
@@ -108,11 +118,7 @@
                  
             </form>
 
-
-
-
-
-
+ -->
 
 
 
